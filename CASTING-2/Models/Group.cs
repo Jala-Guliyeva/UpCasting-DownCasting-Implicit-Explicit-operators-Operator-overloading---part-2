@@ -27,8 +27,8 @@ namespace CASTING_2.Models
         internal void AddStudent(Student student1)
         {
             studnet studnet1 = new studnet();
-            Array.Resize(ref massiv, massiv.Length + 1);
-            massiv[massiv.Length - 1] = Students;
+            Array.Resize(ref students, students.Length + 1);
+            students[students.Length - 1] = Students;
 
         }
         public Student[] GetAllStudents()
@@ -43,22 +43,22 @@ namespace CASTING_2.Models
 
         public Student[] Sort(Student[] massiv)
         {
-            Student[] massivs = new Student[massiv.Length];
-            Array.Copy(massiv, massivs, massivs.Length);
-            for (int i = 0; i < massivs.Length - 1; i++)
+            Student[] students = new Student[massiv.Length];
+            Array.Copy(massiv, students, students.Length);
+            for (int i = 0; i < students.Length - 1; i++)
             {
-                for (int j = 0; j < massivs.Length - 1; j++)
+                for (int j = 0; j < students.Length - 1; j++)
                 {
-                    if (massivs[j] > massivs[i + 1])
+                    if (students[j] > students[i + 1])
                     {
-                        Student temp = massivs[j];
-                        massivs[j] = massivs[j + 1];
-                        massivs[j + 1] = temp;
+                        Student temp = students[j];
+                        students[j] = students[j + 1];
+                        students[j + 1] = temp;
                     }
                 }
 
             }
-            return massivs;
+            return students;
 
      } }
 }
