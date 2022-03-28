@@ -11,20 +11,20 @@ namespace CASTING_2.Models
         public Student Students { get; private set; }
         private Student[] students;
 
-        private static int _No = 200;
+        private static int _No = 101;
         private object _students;
         private object[] massiv;
 
         public Group(double v,int _noavto)
         {
-            No++;
+            _No++;
             No = _No;
 
         }
 
         public Group()
         {
-            _No++;
+           
          
             students = new Student[1];
         }

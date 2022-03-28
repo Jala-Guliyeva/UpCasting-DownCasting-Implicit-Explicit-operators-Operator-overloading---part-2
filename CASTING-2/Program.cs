@@ -11,7 +11,7 @@ namespace CASTING_2
             Student student1 = new Student("Ilknur", "Ezizov", 19);
             Student student2 = new Student("Kamran", "Quliyev", 10);
             Student student3 = new Student("Konul", "Quliyeva", 13);
-            //Console.WriteLine(student.Point<student3.Point);
+            Console.WriteLine(student.Point<student3.Point);
 
             Group group = new Group();
 
