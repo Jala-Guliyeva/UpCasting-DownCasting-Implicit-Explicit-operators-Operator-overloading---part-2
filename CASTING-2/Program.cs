@@ -69,13 +69,7 @@ namespace CASTING_2
             }
         }
 
-        static string numbers (string P101,int num)
-        {
-            string AP = AP101.TrimEnd('0', '1', '2', '3', '4', '5', '6', '7', '8');
-             AP101.Substring(AP.Length);
-
-           
-        }
+       
     }
 
 
