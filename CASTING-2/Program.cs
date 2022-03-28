@@ -69,17 +69,12 @@ namespace CASTING_2
             }
         }
 
-        static string increment_number_at_end_of_string(string AP101, int num)
+        static string numbers (string P101,int num)
         {
-            string AP = AP101.TrimEnd('0', '1', '2', '3', '4', '5', '6', '7', '8', '9');
-            string 101 = AP101.Substring(AP.Length);
+            string AP = AP101.TrimEnd('0', '1', '2', '3', '4', '5', '6', '7', '8');
+             AP101.Substring(AP.Length);
 
-            int number = -1;
-            if (int.TryParse(101, out number))
-            {
-                return AP + (number + 1).ToString();
-            }
-            return AP101;
+           
         }
     }
 
@@ -87,5 +82,4 @@ namespace CASTING_2
 }
 
        
-    }
-}
+   
