@@ -7,42 +7,63 @@ namespace CASTING_2.Models
     internal class Group:Student
     {
         public int No { get; }
-        private static  int _no;
+        
+        public Student Students { get; private set; }
         private Student[] students;
 
-        public Group(string name,string surname,int point,int no):base(name,surname,point)
+        private static int _No = 200;
+        private object _students;
+        private object[] massiv;
+
+        public Group(double v,int _noavto)
         {
             No++;
-            No = _no;
+            No = _No;
+
         }
-        public void AddStudent(Student student)
+
+        public Group()
         {
-
-            
-                //Array.Resize(ref students, students.Length + 1);
-                //students[students.Length - 1] = student;
-                //return;
-            
-
-           
+            _No++;
+         
+            students = new Student[1];
         }
 
-        
+        internal void AddStudent(Student student1)
+        {
+            studnet studnet1 = new studnet();
+            Array.Resize(ref massiv, massiv.Length + 1);
+            massiv[massiv.Length - 1] = Students;
 
+        }
         public Student[] GetAllStudents()
         {
-            return students;
+            return (Student[])students;
         }
-        public void Sort()
-        {
-            Student student3 = new Student("Konul", "Quliyeva", 13);
-            Array.Sort(students);
-            foreach (var item in students)
-            {
-                Console.WriteLine(student3);
-            }
 
+        internal IEnumerable<Student> Sort()
+        {
+            throw new NotImplementedException();
         }
-         
-    }
+
+        public Student[] Sort(Student[] massiv)
+        {
+            Student[] massivs = new Student[massiv.Length];
+            Array.Copy(massiv, massivs, massivs.Length);
+            for (int i = 0; i < massivs.Length - 1; i++)
+            {
+                for (int j = 0; j < massivs.Length - 1; j++)
+                {
+                    if (massivs[j] > massivs[i + 1])
+                    {
+                        Student temp = massivs[j];
+                        massivs[j] = massivs[j + 1];
+                        massivs[j + 1] = temp;
+                    }
+                }
+
+            }
+            return massivs;
+
+     } }
 }
